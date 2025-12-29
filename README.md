@@ -1,98 +1,72 @@
-# URL Opener with YouTube MP3 Downloader
+# Dana Shir MP3 Downloader
 
-A simple Python program that:
-- Opens URLs in your default web browser
-- Automatically downloads MP3 audio from YouTube links
+A simple web-based tool to download YouTube videos as MP3 files with lyrics.
+
+## Quick Start Guide
+
+### For Windows Users
+1. Read: `SETUP_INSTRUCTIONS_WINDOWS.md`
+2. Double-click: `Dana_Shir_Downloader.bat`
+
+### For Mac/Linux Users
+1. Read: `SETUP_INSTRUCTIONS.md`
+2. Double-click: `Dana_Shir_Downloader.command`
+
+## What This Does
+- Download YouTube videos as MP3 files
+- Automatically download lyrics when available (as .srt files)
+- Simple web interface - no technical knowledge needed
+- Files saved to your Downloads folder
 
 ## Features
-
-- Opens any URL in your default web browser
-- **Detects YouTube links and downloads audio as MP3**
-- Automatically adds `https://` if you don't include it
-- Default URL is **apple.com** if no URL is entered
+- Web-based interface (runs in your browser)
+- Double-click launcher - no command line needed
+- Auto-installs dependencies
 - Best quality audio extraction
-- Simple command-line interface
-- Interactive mode for easy use
+- Automatic lyrics download (when available)
+- Works with any YouTube URL
 
-## Usage
+## System Requirements
+- **Windows:** Python 3.11+, ffmpeg
+- **Mac:** Python 3 (included), yt-dlp, ffmpeg (auto-installed via Homebrew)
+- Internet connection
 
-### Method 1: Command-line argument
+## First-Time Setup
+See the setup instructions file for your operating system:
+- Windows: `SETUP_INSTRUCTIONS_WINDOWS.md`
+- Mac: `SETUP_INSTRUCTIONS.md`
+
+## Daily Use
+1. Double-click the launcher file (`.bat` for Windows or `.command` for Mac)
+2. Browser opens automatically to the app at http://localhost:8080
+3. Paste any YouTube URL
+4. Click Download
+5. Find your MP3 in the Downloads folder
+
+## File Locations
+- **Windows:** `C:\Users\YourName\Downloads`
+- **Mac:** `~/Downloads/`
+
+## Advanced Usage - Command Line (Optional)
+
+The original command-line version is still available:
+
 ```bash
-# Open regular URL
-python3 open_url.py ynet.com
+# Run the web server manually
+python3 app.py
 
-# Download YouTube audio as MP3
+# Or use the original CLI version
 python3 open_url.py "https://www.youtube.com/watch?v=VIDEO_ID"
 ```
 
-### Method 2: Interactive mode
-```bash
-python3 open_url.py
-```
-Then enter the URL when prompted (or press Enter for apple.com).
+See the original README sections below for more CLI options.
 
-## Examples
+## Troubleshooting
+See the setup instructions file for common issues and solutions.
 
-```bash
-# Open a regular website
-python3 open_url.py ynet.com
+## Cloud Version
+There's also a cloud version deployed at Render.com, but YouTube often blocks cloud downloads.
+For reliable downloads, use the local version (this one).
 
-# Download YouTube video as MP3
-python3 open_url.py "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-
-# Short YouTube URL also works
-python3 open_url.py "https://youtu.be/dQw4w9WgXcQ"
-
-# Interactive mode - enter a URL
-python3 open_url.py
-# Then type: google.com
-
-# Interactive mode - press Enter for default (apple.com)
-python3 open_url.py
-# Then just press Enter (opens apple.com)
-```
-
-## Requirements
-
-- Python 3
-- `yt-dlp` (for YouTube downloads)
-- `ffmpeg` (for MP3 conversion)
-
-### Installing Required Tools
-
-```bash
-# Using Homebrew (macOS) - RECOMMENDED
-brew install yt-dlp ffmpeg
-
-# Or install separately:
-brew install yt-dlp
-brew install ffmpeg
-
-# Alternative using pip for yt-dlp only:
-pip3 install yt-dlp
-brew install ffmpeg  # Still need ffmpeg for MP3 conversion
-```
-
-**Important:** Both `yt-dlp` AND `ffmpeg` are required for MP3 downloads to work properly.
-
-## How It Works
-
-1. **Regular URLs**: Opens in your default web browser (Chrome, Safari, Firefox, etc.)
-2. **YouTube URLs**: Automatically detected and audio is downloaded as MP3
-   - Detects: youtube.com, youtu.be, m.youtube.com
-   - Extracts audio in best quality
-   - Converts to MP3 format
-   - **Saves in your Downloads folder** (`~/Downloads/`)
-   - Filename is the video's title
-
-## YouTube Download Output
-
-When you provide a YouTube URL:
-```
-Detected YouTube link: https://www.youtube.com/watch?v=...
-Downloading audio as MP3...
-✓ Download completed successfully!
-✓ File saved in: /Users/yourname/Downloads
-```
-
-The MP3 file will be saved in your **Downloads folder** with the video's title as the filename.
+## Credits
+Created with Flask, yt-dlp, and ffmpeg.

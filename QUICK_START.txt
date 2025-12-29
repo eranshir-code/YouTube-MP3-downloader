@@ -1,0 +1,82 @@
+═══════════════════════════════════════════════════════════
+    DANA SHIR MP3 DOWNLOADER - QUICK START CARD
+═══════════════════════════════════════════════════════════
+
+📋 ONE-TIME SETUP (First time only):
+
+  1. Copy web_project folder to Desktop
+
+  2. Install Python from python.org/downloads
+     ⚠️  CHECK "Add Python to PATH" box!
+
+  3. Install ffmpeg from ffmpeg.org/download.html
+     → Extract to C:\ffmpeg
+     → Add C:\ffmpeg\bin to System PATH
+     → Restart computer
+
+  ✓ Setup complete!
+
+───────────────────────────────────────────────────────────
+
+🎵 HOW TO USE (Every time):
+
+  1. Double-click: Dana_Shir_Downloader.bat
+
+  2. Browser opens automatically
+
+  3. Paste YouTube URL in the box
+
+  4. Click "Download" button
+
+  5. Wait for "Download Ready!"
+
+  6. Click "Download MP3" button
+
+  7. Find your MP3 in Downloads folder
+
+  8. Close black window when done
+
+───────────────────────────────────────────────────────────
+
+📁 WHERE ARE MY FILES?
+
+  Windows Key + R → Type: %USERPROFILE%\Downloads → Enter
+
+  Or: File Explorer → Downloads (on left sidebar)
+
+───────────────────────────────────────────────────────────
+
+⚠️ IMPORTANT NOTES:
+
+  ✓ Keep black window open while downloading
+  ✓ Download one video at a time
+  ✓ Internet connection required
+  ✓ Some videos may be protected/blocked
+  ✓ Lyrics saved as .srt files (when available)
+
+───────────────────────────────────────────────────────────
+
+❓ TROUBLESHOOTING:
+
+  Problem: Black window closes immediately
+  Solution: Python not installed or PATH not set
+
+  Problem: Browser doesn't open
+  Solution: Manually open browser → Go to localhost:8080
+
+  Problem: Says "ffmpeg not installed"
+  Solution: Complete ffmpeg setup → Restart computer
+
+  Problem: Download fails
+  Solution: Try different video or check internet
+
+───────────────────────────────────────────────────────────
+
+💡 PRO TIP: Create Desktop Shortcut
+
+  Right-click Dana_Shir_Downloader.bat → Create shortcut
+  → Drag shortcut to Desktop → Rename to "Download MP3"
+
+═══════════════════════════════════════════════════════════
+  For detailed instructions, see: WINDOWS_USER_GUIDE.md
+═══════════════════════════════════════════════════════════

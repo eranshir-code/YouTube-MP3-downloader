@@ -39,7 +39,7 @@ def download_youtube_audio(url):
             '--write-subs',  # Download subtitles/lyrics
             '--write-auto-subs',  # Download auto-generated subs if available
             '--sub-langs', 'en',  # Prefer English
-            '--convert-subs', 'txt',  # Convert to text file
+            '--convert-subs', 'srt',  # Convert to SRT format (standard subtitle format)
             '--embed-metadata',  # Embed metadata in MP3
             '--no-check-certificates',
             '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
