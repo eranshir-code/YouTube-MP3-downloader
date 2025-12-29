@@ -25,17 +25,22 @@ def check_dependencies():
 
 
 def download_youtube_audio(url):
-    """Download audio from YouTube as MP3"""
+    """Download audio from YouTube as MP3 and lyrics if available"""
     try:
         # Set output path
         output_template = os.path.join(DOWNLOAD_FOLDER, '%(title)s.%(ext)s')
 
-        # Download audio as MP3
+        # Download audio as MP3 with lyrics
         command = [
             'yt-dlp',
             '-x',  # Extract audio
             '--audio-format', 'mp3',
             '--audio-quality', '0',
+            '--write-subs',  # Download subtitles/lyrics
+            '--write-auto-subs',  # Download auto-generated subs if available
+            '--sub-langs', 'en',  # Prefer English
+            '--convert-subs', 'txt',  # Convert to text file
+            '--embed-metadata',  # Embed metadata in MP3
             '--no-check-certificates',
             '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
             '--extractor-args', 'youtube:player_client=android',
