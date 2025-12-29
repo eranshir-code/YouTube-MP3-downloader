@@ -36,6 +36,9 @@ def download_youtube_audio(url):
             '-x',  # Extract audio
             '--audio-format', 'mp3',
             '--audio-quality', '0',
+            '--no-check-certificates',
+            '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            '--extractor-args', 'youtube:player_client=android',
             '-o', output_template,
             '--print', 'after_move:filepath',  # Print the output file path
             url
