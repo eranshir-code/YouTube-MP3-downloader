@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "title": "Sample news item from Ynet",
+  "author": "Reporter Name",
+  "category": "News",
+  "content": "This is sample news content in Hebrew: חדשות",
+  "published": "2024-12-29",
+  "tags": [
+    "technology",
+    "Israel",
+    "news"
+  ]
+}

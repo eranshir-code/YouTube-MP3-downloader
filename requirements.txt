@@ -1,0 +1,5 @@
+flask
+yt-dlp
+
+# Note: ffmpeg is also required for MP3 conversion
+# Install with: brew install ffmpeg
